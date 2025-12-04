@@ -8,12 +8,6 @@ function createPlayer(name = input("enter your name: ")) {
   return player;
 }
 
-
-let a = createPlayer("haim");
-console.log(player1);
-
-
-
 function addSolveTime(
   name = input("enter a name of player: "),
   number = input("enter seconds: ")
@@ -28,7 +22,99 @@ function addSolveTime(
   return "The player not Exists ";
 }
 
+function showStats(name = input("enter a name player:  ")) {
+  let time = 0;
+  let allTimes;
 
-function showStats(name = input('enter a name player:  ')){
+  for (let i = 0; i < player1.length; i++) {
+    if (name === player1[i].name) {
+      allTimes = player1[i].times;
 
+      for (let i = 0; i < allTimes.length; i++) {
+        time += allTimes[i];
+      }
+      return `The all seconds: ${time} The average to ask: ${time / allTimes.length}`;
+    }
+  }
+  return "The player not Exists ";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
