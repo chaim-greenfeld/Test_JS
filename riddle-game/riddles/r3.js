@@ -1,21 +1,21 @@
 import input from "analiza-sync";
 
-const riddle2 = function () {
+const riddle3 = function () {
   const r1 = {
     id: 1,
     name: "Easy Math",
-    taskDescription: input("What is 5 + 12?:       "),
-    correctAnswer: "17",
+    taskDescription: input("What is 5 * 3?     "),
+    correctAnswer: "15",
   };
   if (r1.correctAnswer === r1.taskDescription) {
     console.log("you win");
     return ""
   } else {
     console.log("you loss");
-    return riddle2();
+    return riddle3();
   }
 };
-let a = riddle2;
+let a = riddle3;
 
 
-export { riddle2 };
+export { riddle3 };

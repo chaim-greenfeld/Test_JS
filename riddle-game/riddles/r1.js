@@ -7,11 +7,15 @@ const riddle1 = function () {
     taskDescription: input("What is 5 + 3?     "),
     correctAnswer: "8",
   };
-  return r1;
+  if (r1.correctAnswer === r1.taskDescription) {
+    console.log("you win");
+  
+  } else {
+    console.log("you loss");
+    return riddle1();
+  }
+return r1;
 };
-const a = riddle1();
-if (a.correctAnswer === a.taskDescription) {
-  console.log("you win");
-} else {
-  console.log("you loss");
-}
+let a = riddle1;
+
+export { riddle1 };

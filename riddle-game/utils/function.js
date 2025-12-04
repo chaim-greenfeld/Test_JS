@@ -1,5 +1,6 @@
 import input from "analiza-sync";
-
+import riddles from "./riddels.js";
+import { riddle1 } from "../riddles/r1.js";
 const player1 = [];
 
 function createPlayer(name = input("enter your name: ")) {
@@ -40,14 +41,22 @@ function showStats(name = input("enter a name player:  ")) {
 }
 
 
+function askRiddle(name){
+
+  let a = riddles.riddle1()
+  while (a.correctAnswer !== a.correctAnswer){
+    riddles.riddle1()
+  }
+}
+
+function measureSolveTime(fn){
+
+}
 
 
 
 
-
-
-
-
+export default {createPlayer, addSolveTime, showStats, askRiddle}
 
 
 
